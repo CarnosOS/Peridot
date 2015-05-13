@@ -1,7 +1,12 @@
 <?php
  namespace ArcherSys\Viewer;
+ /*
+  * @package ArcherSysOS
+  */
  class jQueryManager{
-
+  /* 
+   * The Jquery Asset Manager
+   */
  	static function addjQuery(){
  		echo '<script src="/core/js/jquery.js"></script>';
  	}
