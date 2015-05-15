@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>ConchTack</title>
+        <link rel="stylesheet" href="css/screen.css" />
+<script src="/settings/components/webcomponentsjs/webcomponents.js"></script>
+<link rel="import" href="/settings/components/polymer/polymer.html">
+
+<link rel="import" href="/settings/components/core-toolbar/core-toolbar.html">
+<link rel="import" href="/settings/components/core-icon-button/core-icon-button.html">
+<link rel="import" href="/settings/components/core-input/core-input.html">
+
+<link rel="import" href="/settings/components/core-header-panel/core-header-panel.html">
+
+<link rel="import" href="/settings/components/core-label/core-label.html">
+
+<link rel="import" href="/settings/components/font-roboto/roboto.html">
+    </head>
+    <body fullbleed layout horizontal>
+<style type="text/css">
+core-toolbar{
+   background: green;
+   color: white;
+font-family: RobotoDraft, Trebuchet MS, Segoe UI;
+}
+</style>
+<core-header-panel flex>
+<core-toolbar>
+<div flex>ConchTack</div>
+
+
+            
+</core-toolbar>
+<section>
+       <div id="contacts">
+<header>
+                <div id="filter"><label>Show me:</label></div>
+
+
+                <a id="showForm" href="#">Add new contact</a>
+                <form id="addContact" action="#">
+                    <core-label for="photo">Photo:</label><input is="core-input" id="photo" type="file" />
+                    <core-label for="name">Name:</label><input is="core-input" id="name" />
+                    <core-label for="type">Type:</label><input is="core-input" id="type" />
+                    <core-label for="address">Address:</label><input is="core-input" id="address" />
+                    <core-label for="tel">Tel:</label><input is="core-input" id="tel" />
+                    <core-label for="email">Email:</label><input is="core-input" id="email" />
+                    <core-icon-button icon="add" id="add">Add</core-icon-button>
+                </form>
+            </header>
+        </div>
+        <script id="contactTemplate" type="text/template">
+            <img src="<%= photo %>" alt="<%= name %>" />
+            <h1><%= name %><span><%= type %></span></h1>
+            <div><%= address %></div>
+            <dl>
+                <dt>Tel:</dt><dd><%= tel %></dd>
+                <dt>Email:</dt><dd><a href="mailto:<%= email %>"><%= email %></a></dd>
+            </dl>
+            <core-icon-button icon="delete" class="delete">Delete</core-icon-button>
+            <core-icon-button icon="settings" class="edit">Edit</core-icon-button>
+        </script>
+        <script id="contactEditTemplate" type="text/template">
+            <form action="#">
+                <input is="core-input" type="file" value="<%= photo %>" />
+                <input is="core-input" class="name" value="<%= name %>" />
+                <input  is="core-input" id="type" type="hidden" value="<%= type %>" />
+                <input is="core-input" class="address" value="<%= address %>" />
+                <input is="core-input" class="tel" value="<%= tel %>" />
+                <input is="core-input" class="email" value="<%= email %>" />
+                <core-icon-button icon="save" class="save">Save</core-icon-button>
+                <core-icon-button icon="cancel" class="cancel">Cancel</core-icon-button>
+            </form>
+        </script>
+</section>
+</core-header-panel>
+        <script src="js/jquery-1.7.1.min.js"></script>
+        <script src="js/json2.js"></script>
+        <script src="js/underscore-min.js"></script>
+        <script src="js/backbone-min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
