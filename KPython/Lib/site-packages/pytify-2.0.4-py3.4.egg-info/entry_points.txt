@@ -1,0 +1,3 @@
+[console_scripts]
+pytify = pytify.cli:main
+

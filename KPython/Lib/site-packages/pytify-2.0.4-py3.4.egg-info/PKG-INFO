@@ -1,0 +1,73 @@
+Metadata-Version: 1.1
+Name: pytify
+Version: 2.0.4
+Summary: Spotify remote. Search, start and navigate through songs.
+Home-page: https://github.com/bjarneo/pytify
+Author: Bjarne Oeverli
+Author-email: bjarne.oeverli@gmail.com
+License: MIT
+Description: Pytify
+        =============
+        
+        Search and start songs from command line.<br>
+        Should work in Linux and OS X.<br>
+        Supports both python 2 and 3. <br>
+        
+        ![Image of terminal]
+        (http://i.imgur.com/zlt3f8P.gif)
+        
+        
+        ## Installation
+        ```python
+        $ sudo pip install pytify
+        ```
+        
+        ## Or clone the repo
+        ```python
+        $ git clone https://github.com/bjarneo/pytify.git
+        $ cd pytify
+        $ sudo python setup.py install
+        ```
+        
+        ### Usage
+        ```python
+        # To start the app type
+        $ pytify
+        
+        # next song
+        $ pytify -n
+        
+        # prev song
+        $ pytify -p
+        
+        # play and pause song
+        $ pytify -pp
+        ```
+        
+        ### Dependency
+        ```bash
+        pip install requests
+        ```
+        
+        ### Contributing
+        Contributions are appreciated.
+        
+        ### Contributors
+        - [@joined](https://github.com/joined/) - OS X
+        - [@adam410](https://github.com/adam410/) - OS X issue
+        - [@Newky](https://github.com/Newky) - Better structure
+        - [@ymski](https://github.com/ymski) - OS X 
+        
+Keywords: spotify pytify song search curses
+Platform: UNKNOWN
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Environment :: Console :: Curses
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Topic :: Terminals

@@ -1,0 +1,77 @@
+Metadata-Version: 2.0
+Name: blockspring
+Version: 0.1.10
+Summary: Blockspring api wrapper
+Home-page: https://www.blockspring.com
+Author: Blockspring
+Author-email: paul@blockspring.com
+License: MIT
+Keywords: blockspring function cloud api service library development
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Requires-Dist: requests
+
+blockspring.py
+==============
+
+Python module to assist in creating blocks on Blockspring.
+
+Installation
+~~~~~~~~~~~~
+
+.. code:: bash
+
+    pip install blockspring
+
+Example Usage
+~~~~~~~~~~~~~
+
+Save the following script to an example.py file:
+
+.. code:: python
+
+    import blockspring
+
+    def myFunction(request, response):
+        mySum = request.params["num1"] + request.params["num2"]
+
+        response.addOutput('sum', mySum)
+
+        response.end()
+
+    blockspring.define(myFunction)
+
+Then in your command line write:
+
+.. code:: shell
+
+    python example.py --num1=20 --num2=50
+
+or
+
+.. code:: shell
+
+    echo '{"num1":20, "num2": 50}' | python example.py
+
+License
+~~~~~~~
+
+MIT
+
+Contact
+~~~~~~~
+
+Email us: founders@blockspring.com
+
+
+

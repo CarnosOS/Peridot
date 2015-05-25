@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: GetGist
+Version: 0.0.1
+Summary: Command-line to update local files from GitHub gists
+Home-page: http://github.com/cuducos/getgist
+Author: Eduardo Cuducos
+Author-email: cuducos@gmail.com
+License: Public Domain
+Description: Check `GetGist at GitHub <http://github.com/cuducos/getgist>`_.
+Keywords: gist,command-line,github,dotfiles
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: License :: Public Domain

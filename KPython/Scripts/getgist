@@ -1,0 +1,6 @@
+#!k:\ArcherVMPeridot\htdocs\KPython\Scripts\python.exe
+# coding: utf-8
+
+from getgist import Gist
+gist = Gist()
+gist.save()
