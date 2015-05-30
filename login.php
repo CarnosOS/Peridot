@@ -3,11 +3,14 @@
 require_once "includes/ViewManager.php";
 require_once "includes/LogicManager.php";
 require_once "includes/ConfigManager.php";
+require_once "includes\ArcherAuth2.php";
 require_once "vendor/autoload.php";
 use Recaptcha\Recaptcha;
+use ArcherSys\Auth\Oauth2\ArcherAuth2;
  use ArcherSys\Viewer\ViewManager;
  use ArcherSys\Viewer\LogicManager;
-
+$au = new ArcherAuth2();
+$au->go(function(){
  // Connects to your Database
 
  mysql_connect("localhost", "root", "aco1234") or die(mysql_error());
@@ -260,6 +263,7 @@ LogicManager::addGPlus();
 <?php
 
  }
+});
 
  
 

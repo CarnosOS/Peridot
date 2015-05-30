@@ -117,6 +117,8 @@ class OAuthClient extends \Zeflasher\OAuth\Provider\OAuthRequest
      * }
      * @param string $url All the query string will be removed. Passed them in the param array
      * @param string $method GET, POST, PUT, DELETE, and any custom ones you would provide
+     * @param array $otpions Optional curl options. Same as for curl with the exeption of:
+     * * CURLOPT_COOKIE is an assiociative array
      * @param array $parameters Array in the following format ['key' => value], if set will override the existing ones set using set_parameter
      * @param string $returnType Format we you are expecting the response (not implemented yet)
      * @param string $callbackUrl The callbackurl (optional)
@@ -124,7 +126,7 @@ class OAuthClient extends \Zeflasher\OAuth\Provider\OAuthRequest
      * @param string $proxy Proxy to use
      * @return \stdClass
      */
-    public function request($url, $method = 'GET', Array $parameters = null, $returnType = 'json', $callbackUrl = null, $verifier = null, $proxy = null)
+    public function request($url, $method = 'GET', Array $parameters = null, Array $options = null, $returnType = 'json', $callbackUrl = null, $verifier = null, $proxy = null)
     {
         $this->_http_url = $url;
         $this->_http_method = $method;
@@ -154,6 +156,27 @@ class OAuthClient extends \Zeflasher\OAuth\Provider\OAuthRequest
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_SSL_VERIFYPEER => false
         );
+
+        if( !empty($options) )
+        {
+            foreach( $options as $option => $optionValue )
+            {
+                switch ($option)
+                {
+                    case CURLOPT_COOKIE:
+                        $cookieString = [];
+                        foreach ($optionValue as $key => $value)
+                        {
+                            $cookieString[] = $key ."=". $value;
+                        }
+                        $curl_options[$option] = implode(';', $cookieString);
+                    break;
+                    default:
+                        $curl_options[$option] = $optionValue;
+                    break;
+                }
+            }
+        }
 
         if ($proxy)
         {

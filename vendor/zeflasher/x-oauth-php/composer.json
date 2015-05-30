@@ -1,25 +1,25 @@
 {
-  "name": "zeflasher/x-oauth-php",
+  "name": "nolazybits/x-oauth-php",
   "description": "OAuth and XAuth client/server",
   "type": "library",
   "keywords": ["oauth", "xauth"],
-  "homepage": "https://bitbucket.org/zeflasher/x-oauth-php",
+  "homepage": "https://bitbucket.org/nolazybits/x-oauth-php",
   "license": "MIT",
   "authors":
   [
     {
       "name": "Xavier Martin",
-      "email": "zeflasher+xoauth@gmail.com",
+      "email": "nolazybits+xoauth@gmail.com",
       "homepage": "http://dev.webbymx.net",
       "role": "Developer"
     }
   ],
   "support":
   {
-    "email": "zeflasher+xoauth@gmail.com",
-    "issues": "https://bitbucket.org/zeflasher/x-oauth-php/issues",
-    "wiki": "https://bitbucket.org/zeflasher/x-oauth-php/wiki/Home",
-    "source": "https://bitbucket.org/zeflasher/x-oauth-php/src"
+    "email": "nolazybits+xoauth@gmail.com",
+    "issues": "https://bitbucket.org/nolazybits/x-oauth-php/issues",
+    "wiki": "https://bitbucket.org/nolazybits/x-oauth-php/wiki/Home",
+    "source": "https://bitbucket.org/nolazybits/x-oauth-php/src"
   },
   "require-dev":
   {
@@ -36,7 +36,7 @@
   [
     {
       "type": "vcs",
-      "url": "https://zeflasher@bitbucket.org/zeflasher/x-oauth-php.git"
+      "url": "https://bitbucket.org/nolazybits/x-oauth-php.git"
     }
   ],
   "require":
